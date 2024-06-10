@@ -112,60 +112,59 @@ class Calculator {
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      calculator.clear();
-      calculator.updateDisplay();
+      calculator.clear()
+      calculator.updateDisplay()
     }
     if (event.key === "Delete") {
-      calculator.delete();
-      calculator.updateDisplay();
+      calculator.delete()
+      calculator.updateDisplay()
     }
   
     if (Number(event.key)) {
-      calculator.appendNumber(Number(event.key));
-      calculator.updateDisplay();
+      calculator.appendNumber(Number(event.key))
+      calculator.updateDisplay()
     }
   
     if (event.key === ".") {
-      calculator.appendNumber(".");
-      calculator.updateDisplay();
+      calculator.appendNumber(".")
+      calculator.updateDisplay()
     }
   
     if (event.key === "Enter") {
-      calculator.compute();
-      calculator.updateDisplay();
+      calculator.compute()
+      calculator.updateDisplay()
     }
   
     if (event.key === "+") {
-      calculator.chooseOperation("+");
-      calculator.updateDisplay();
+      calculator.chooseOperation("+")
+      calculator.updateDisplay()
     }
   
     if (event.key === "-") {
-      calculator.chooseOperation("-");
-      calculator.updateDisplay();
+      calculator.chooseOperation("-")
+      calculator.updateDisplay()
     }
   
     if (event.key === "*") {
-      calculator.chooseOperation("*");
-      calculator.updateDisplay();
+      calculator.chooseOperation("*")
+      calculator.updateDisplay()
     }
   
     if (event.key === "/") {
-      calculator.chooseOperation("/");
-      calculator.updateDisplay();
+      calculator.chooseOperation("/")
+      calculator.updateDisplay()
     }
   });
   
   operationButtons.forEach(button => {
     button.addEventListener("click", () => {
-      calculator.chooseOperation(button.innerText);
-      calculator.updateDisplay();
+      calculator.chooseOperation(button.innerText)
+      calculator.updateDisplay()
     });
   });
-  
-  
+
   equalsButton.addEventListener("click", button => {
-    calculator.compute()  
+    calculator.compute()
     calculator.updateDisplay()
   })
   
